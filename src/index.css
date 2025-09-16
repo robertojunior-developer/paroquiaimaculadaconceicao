@@ -1,0 +1,15 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+  min-height: 100vh;
+  color: #151E30;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, label, input, button, div {
+  color: #151E30 !important;
+}

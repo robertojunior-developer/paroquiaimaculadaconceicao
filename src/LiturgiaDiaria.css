@@ -1,0 +1,140 @@
+.liturgia-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px auto;
+  color: #333;
+  max-width: 900px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.liturgia-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d4af37; /* Dourado */
+}
+
+.liturgia-header h2 {
+  color: #151E30; /* Azul */
+  margin-bottom: 5px;
+}
+
+.liturgia-header h3 {
+  color: #555;
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.datepicker-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.datepicker-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.error-message {
+  color: #d9534f; /* Vermelho para erros */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.liturgia-content h3 {
+    text-align: center;
+    color: #151E30;
+    margin-top: 20px;
+}
+
+.liturgia-content p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.liturgia-header p {
+  color: #333;
+  font-size: 1em;
+}
+
+.leitura {
+  margin-bottom: 25px;
+}
+
+h2.liturgia-main-title {
+  background-color: #3a5e85; /* Azul escuro, similar ao da imagem */
+  color: white !important; /* Garante que a cor seja branca */
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  margin-bottom: 16px;
+}
+
+h2.liturgia-main-title svg {
+  color: #ffd700; /* Amarelo Dourado */
+}
+
+.leitura-title {
+  color: #151E30; /* Azul escuro */
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.leitura-item {
+  margin-bottom: 20px;
+}
+
+.referencia {
+  font-weight: bold;
+  color: #d4af37; /* Dourado */
+  margin-bottom: 5px;
+}
+
+.titulo-leitura {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.refrao {
+  font-weight: bold;
+  color: #151E30; /* Azul */
+  margin-bottom: 15px;
+}
+
+.texto-leitura p,
+.texto-leitura br {
+  margin-bottom: 1em;
+}
+
+.texto-leitura {
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .liturgia-container {
+    padding: 15px;
+  }
+
+  .liturgia-header h2 {
+    font-size: 1.5em;
+  }
+
+  .leitura h4 {
+    font-size: 1.2em;
+  }
+}

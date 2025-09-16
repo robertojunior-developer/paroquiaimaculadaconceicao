@@ -1,0 +1,734 @@
+.main-bg {
+  min-height: 100vh;
+  background-color: #151E30; /* Alterado de gradiente para cor sólida */
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Um cinza claro para o fundo */
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  background: url('../Images/003.PNG') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.sobre-nos {
+  width: 100%;
+  min-width: 100%;
+  background: #fff;
+  color: #151E30;
+  padding: 4rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+header {
+  background-color: var(--primary-color);
+  position: relative; /* Necessário para posicionar a busca */
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  width: 100%;
+  background: rgba(21, 30, 48, 0.5);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 8px rgba(58, 102, 198, 0.10);
+  border-bottom: 3px solid #d4af37;
+}
+
+.menu.solid-bg {
+  background: rgb(21, 30, 48);
+  border-radius: 0;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; /* Distribui os itens do menu */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.menu li {
+  margin: 0 0.5rem;
+  position: relative; /* Para o submenu */
+}
+
+.menu .submenu a:hover {
+  background-color: #0d1320;
+  color: #d4af37;
+}
+
+.search-container {
+  position: absolute;
+  right: 2rem;
+  top: 60px; /* Posição fixa a partir do topo */
+  z-index: 100;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+  transition: background-color 0.3s, border-color 0.3s;
+  
+  /* Estilo padrão para fundo escuro (Home) */
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  outline: none;
+  width: 180px;
+  transition: color 0.3s;
+
+  /* Estilo padrão para fundo escuro (Home) */
+  color: white;
+}
+
+.search-input::placeholder {
+  /* Estilo padrão para fundo escuro (Home) */
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+
+  /* Estilo padrão para fundo escuro (Home) */
+  color: white;
+}
+
+/* Estilos para páginas com fundo claro */
+.search-container.light-bg .search-form {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.search-container.light-bg .search-input,
+.search-container.light-bg .search-button {
+  color: #333; /* Cor preta para o texto e ícone */
+}
+
+.search-container.light-bg .search-input::placeholder {
+  color: #888; /* Cor cinza para o placeholder */
+}
+
+.page-content {
+  padding: 20px;
+  flex-grow: 1; /* Garante que o conteúdo ocupe o espaço restante */
+}
+
+.hero + .page-content {
+  padding: 0; /* Remove o padding quando está na home, pois o layout é diferente */
+}
+
+.menu .logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #151E30, 0 0 8px #d4af37;
+} 
+
+.menu > ul > li > a {
+  text-decoration: none;
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 1rem; /* Aumentado para melhor legibilidade */
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  display: flex; /* Para alinhar ícone e texto */
+  align-items: center; /* Alinhamento vertical */
+}
+
+.menu-icon {
+  margin-right: 0.5rem; /* Espaço entre ícone e texto */
+  font-size: 1em; /* Tamanho do ícone igual ao do texto */
+  vertical-align: middle; /* Tentativa de alinhar melhor, mas flexbox é mais robusto */
+}
+
+.menu > ul > li > a:hover {
+  color: #d4af37 !important;
+  border-bottom: 2px solid #d4af37;
+}
+
+.menu ul li a.active-menu-item,
+.submenu li a.active-menu-item {
+  color: #6CB4EE !important; /* Azul claro para o texto do item ativo */
+  border-bottom: 2px solid #6CB4EE !important; /* Borda inferior azul claro */
+}
+
+/* Estilos para os itens do menu principal */
+/* Estilos para os itens do menu principal */
+.menu ul li {
+  /* margin-right: 1.5rem; */ /* Removido pois 'gap' em 'ul' cuida disso */
+  position: relative; /* Para o submenu */
+}
+
+/* Estilos para o item pai do dropdown */
+.menu ul li.dropdown-parent {
+  position: relative; /* Necessário para posicionar o submenu */
+}
+
+/* Estilos para o submenu */
+ul.submenu { /* Seletor mais específico para o container */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #151E30; /* Fundo azul escuro para o container */
+  border: 1px solid #d4af37;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  min-width: 200px; /* Garante largura mínima para o submenu */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block !important; /* Força o ul.submenu a ser um container de bloco com prioridade máxima */
+  white-space: normal !important; /* Garante que white-space:nowrap não interfira */
+}
+
+/* Garante o mesmo fundo azul em todos os submenus do menu principal */
+.menu > ul > li.dropdown-parent > ul.submenu {
+  background-color: #151E30 !important;
+}
+
+.dropdown-parent:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+ul.submenu > li { /* Seletor para os <li> diretos do ul.submenu */
+  margin: 0;
+  padding: 0;
+  display: block !important; /* Força o <li> a ser um bloco com prioridade máxima */
+  width: 100% !important;    /* Faz o <li> ocupar toda a largura do ul.submenu com prioridade máxima */
+  float: none !important;    /* Anula qualquer float */
+  clear: both !important;    /* Garante que não haja flutuação ao redor */
+}
+
+ul.submenu > li > a { /* Seletor para os <a> diretos dos <li> diretos do ul.submenu */
+  padding: 0.8rem 1rem;
+  white-space: normal; /* Permite que o texto quebre a linha */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #fff !important;
+  font-weight: 500;
+  text-decoration: none; /* Adicionado para garantir ausência de sublinhado */
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  box-sizing: border-box;
+  background-color: #151E30; /* Cor de fundo escura fixa */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+ul.submenu > li > a:hover {
+  color: #d4af37 !important; /* Cor dourada ao passar o mouse */
+  background-color: #0d1320 !important; /* Fundo azul mais escuro no hover */
+}
+
+ul.submenu > li:last-child > a {
+  border-bottom: none; /* Remove a borda do último item */
+}
+
+
+.info-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  background-color: #151E30;
+  padding: 3rem 2rem;
+}
+
+.info-box-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex; /* Garante que o link se comporte como um item flex para esticar */
+}
+
+/* Estilos para a seção "Sobre Nós" */
+.sobre-nos {
+    padding: 4rem 2rem;
+    background-color: #ffffff; /* Fundo branco para a seção */
+    color: #333; /* Cor de texto padrão para a seção */
+    text-align: center; /* Centraliza o título principal da seção */
+}
+
+.sobre-nos-container {
+    max-width: 1100px; /* Largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza o container de conteúdo */
+    text-align: left; /* Alinha o texto dos tópicos à esquerda */
+}
+
+.sobre-nos h2 {
+    font-size: 2.5rem;
+    color: #151E30; /* Azul escuro para o título */
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.sobre-nos h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #d4af37; /* Dourado */
+    margin: 0.5rem auto 0; /* Centraliza a linha abaixo do título */
+}
+
+.sobre-topico {
+    margin-bottom: 2.5rem;
+}
+
+.sobre-topico:last-child {
+    margin-bottom: 0; /* Remove margem do último tópico */
+}
+
+.sobre-topico h3 {
+    font-size: 1.8rem;
+    color: #151E30; /* Azul escuro para subtítulos, para consistência */
+    margin-bottom: 1rem;
+    border-left: 4px solid #d4af37; /* Detalhe dourado à esquerda do subtítulo */
+    padding-left: 0.75rem;
+}
+
+.sobre-topico p,
+.sobre-topico ul li {
+    color: #555; /* Cinza um pouco mais escuro para melhor leitura */
+    line-height: 1.8;
+    font-size: 1.05rem; /* Levemente maior para conforto */
+    margin-bottom: 1rem; /* Espaçamento para parágrafos e itens de lista */
+    overflow-wrap: break-word; /* Garante quebra de palavras longas */
+}
+
+.sobre-topico ul {
+    list-style-type: none; /* Remove marcadores padrão */
+    padding-left: 0; /* Remove recuo padrão da lista */
+}
+
+.sobre-topico ul li {
+    position: relative;
+    padding-left: 1.5rem; /* Espaço para o pseudo-elemento marcador */
+    margin-bottom: 0.75rem;
+}
+
+.sobre-topico ul li::before {
+    content: "\2713"; /* Código para um checkmark (✓) */
+    color: #d4af37; /* Cor dourada para o marcador */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 1px; /* Ajuste fino da posição vertical */
+    font-size: 1rem;
+}
+
+.sobre-topico b {
+    color: #151E30; /* Destaca o texto em negrito com a cor azul escura */
+}
+
+/* Responsividade para .sobre-nos */
+@media (max-width: 768px) {
+    .sobre-nos h2 {
+        font-size: 2rem;
+    }
+    .sobre-nos-container {
+        padding: 0 1rem; /* Adiciona um pouco de padding lateral em telas menores */
+    }
+    .sobre-topico h3 {
+        font-size: 1.5rem;
+    }
+    .sobre-topico p,
+    .sobre-topico ul li {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* Fim da seção "Sobre Nós" */
+
+
+/* Estilos para a Seção Contato */
+.contato-section {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa; /* Um fundo ligeiramente diferente para destacar a seção */
+  text-align: center;
+  color: #333; /* Cor de texto mais escura para contraste */
+}
+
+.contato-section h2 {
+  font-size: 2.5rem;
+  color: #151E30; /* Azul escuro para o título */
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block; /* Para que o pseudo-elemento funcione bem */
+}
+
+.contato-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #d4af37; /* Dourado */
+  margin: 0.5rem auto 0;
+}
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap; /* Para responsividade em telas menores */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contato-esquerda, .contato-direita {
+  flex: 1;
+  min-width: 300px; /* Largura mínima para cada coluna antes de quebrar */
+}
+
+.contato-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-icon {
+  color: #d4af37; /* Dourado para os ícones de contato */
+  font-size: 1.8rem;
+}
+
+.contact-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #151E30; /* Azul escuro para ícones sociais */
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #d4af37; /* Dourado no hover */
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.contato-direita {
+  display: flex;
+  flex-direction: column; /* Empilha o iframe e o link verticalmente */
+  align-items: stretch;   /* Faz o iframe ocupar 100% e o link ficar abaixo */
+}
+
+.map-iframe {
+  width: 100%;
+  height: 400px; /* Altura ajustável conforme necessário */
+  border: 2px solid #d4af37; /* Borda dourada no mapa */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Botão/link abaixo do mapa */
+.btn-maps {
+  display: inline-block;
+  margin-top: 10px;
+  color: #151E30;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.btn-maps:hover {
+  color: #d4af37;
+}
+
+/* Responsividade para a seção de contato */
+@media (max-width: 768px) {
+  .contato-container {
+    flex-direction: column;
+    align-items: center; /* Centraliza as colunas empilhadas */
+  }
+
+  .contato-esquerda, .contato-direita {
+    width: 100%;
+    max-width: 500px; /* Limita a largura em telas pequenas */
+    text-align: center; /* Centraliza texto na esquerda quando empilhado */
+  }
+
+  .contact-item {
+    justify-content: center; /* Centraliza itens de contato */
+  }
+
+  .social-icons {
+    text-align: center; /* Centraliza ícones sociais */
+  }
+
+  .contato-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Fim das caixas info-boxes e info-box */
+
+/* Estilos para seções de conteúdo genéricas */
+.content-section {
+  padding: 40px 20px;
+  /* Adicione mais estilos de espaçamento ou fundo conforme necessário */
+}
+
+.padroeira-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.padroeira-imagem {
+  width: 280px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.padroeira-texto {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .padroeira-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .padroeira-imagem {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.clero-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.clero-imagem {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%; /* mantém formato redondo */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.clero-texto {
+  flex: 1;
+}
+
+.clero-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.clero-lista li {
+  margin-bottom: 0.4rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .clero-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .clero-imagem {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.clero-fotos {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.clero-fotos figure {
+  margin: 0;
+  text-align: center;
+}
+
+/* Reutiliza sombra e formato redondo de .clero-imagem, só muda o tamanho */
+.clero-imagem--small {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%; /* mantém formato redondo */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.clero-fotos figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #1b2a41;
+  font-weight: 600;
+}
+
+/* Estilos para a página de Benfeitores */
+.benfeitor-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.benfeitor-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.benfeitor-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.benfeitor-content h2 {
+  color: #151E30;
+}
+
+.qr-code-container {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.pix-key-text {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.agradecimento {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #d4af37;
+}
+
+.sobre-nos {
+  width: 100%;
+  min-width: 100%;
+  background: #fff;
+  color: #151E30;
+  padding: 4rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.search-item {
+  margin-left: auto; /* Empurra o item para a direita */
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2px 5px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  outline: none;
+  width: 150px; /* Largura inicial */
+  transition: width 0.4s ease-in-out;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+  width: 200px; /* Largura ao focar */
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  color: var(--accent-color);
+}

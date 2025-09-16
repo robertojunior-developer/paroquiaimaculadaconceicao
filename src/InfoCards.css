@@ -1,0 +1,91 @@
+.info-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: -80px; /* Puxa os cards para cima, sobrepondo a imagem principal */
+  position: relative;
+  z-index: 10;
+}
+
+.info-card {
+  background-color: #fdfaf5;
+  border: 1px solid #e0d8c8;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon-container {
+  border: 2px solid #e0d8c8;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-content {
+  text-align: left;
+}
+
+.card-subtitle {
+  color: #b59a6a;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 0 0.25rem;
+}
+
+.card-title {
+  color: #4a3f35;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.card-text {
+  color: #6e6055;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.oracao-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn-enviar {
+  background-color: transparent;
+  border: 2px solid #b59a6a;
+  color: #4a3f35;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+  background-color: #b59a6a;
+  color: white;
+}

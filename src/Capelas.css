@@ -1,0 +1,67 @@
+.capelas-container {
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.capelas-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.capelas-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Espaçamento entre as linhas das capelas */
+}
+
+.capela-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #0056b3; /* Linha azul separadora */
+}
+
+.capela-row:last-child {
+  border-bottom: none;
+}
+
+.capela-info-card {
+  flex: 1; /* Ocupa metade do espaço */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.capela-info-imagem {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.capela-info-text h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.capela-info-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+.capela-map-container {
+  flex: 1; /* Ocupa a outra metade do espaço */
+  height: 300px; /* Altura fixa para o mapa */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}

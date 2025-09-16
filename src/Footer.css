@@ -1,0 +1,23 @@
+.site-footer {
+  background-color: #002b5c; /* Azul escuro */
+  padding: 2rem 5%;
+  text-align: center;
+}
+
+/* Garante que todo o texto dentro do rodapé seja branco */
+.site-footer, .site-footer p, .site-footer a {
+    color: #fff !important;
+}
+
+/* Estilos específicos para o link, incluindo todos os seus estados */
+.site-footer a,
+.site-footer a:link,
+.site-footer a:visited {
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}

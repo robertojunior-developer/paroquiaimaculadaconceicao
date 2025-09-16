@@ -1,0 +1,44 @@
+.sacramentos-container {
+  padding: 20px 40px;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sacramentos-title {
+  color: #151E30; /* Azul escuro */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+
+.sacramentos-intro {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.sacramento-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.sacramento-item:last-child {
+  border-bottom: none;
+}
+
+.sacramento-item h2 {
+  color: #3a5e85; /* Azul mais claro */
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.sacramento-item p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+}
