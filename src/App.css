@@ -14,7 +14,7 @@
   position: relative;
   height: 100vh;
   min-height: 800px;
-  background: url('../Images/003.PNG') center/cover no-repeat;
+  background: url('../Images/003.png') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -27,11 +27,11 @@
   min-width: 100%;
   background: #fff;
   color: #151E30;
-  padding: 4rem 0 3rem 0;
+  padding: 3rem 0 2rem 0; /* padding unificado com bloco inferior */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 0; /* usaremos a margem dos tópicos para espaçar */
 }
 
 header {
@@ -301,7 +301,7 @@ ul.submenu > li:last-child > a {
 .sobre-nos h2 {
     font-size: 2.5rem;
     color: #151E30; /* Azul escuro para o título */
-    margin-bottom: 3rem;
+    margin-bottom: 1.2rem; /* menos espaço entre o título e o primeiro tópico */
     position: relative;
     display: inline-block;
 }
@@ -316,7 +316,7 @@ ul.submenu > li:last-child > a {
 }
 
 .sobre-topico {
-    margin-bottom: 2.5rem;
+    margin: 1.5rem 0; /* mesmo espaçamento acima e abaixo */
 }
 
 .sobre-topico:last-child {
@@ -326,7 +326,7 @@ ul.submenu > li:last-child > a {
 .sobre-topico h3 {
     font-size: 1.8rem;
     color: #151E30; /* Azul escuro para subtítulos, para consistência */
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem; /* menos espaço abaixo do subtítulo */
     border-left: 4px solid #d4af37; /* Detalhe dourado à esquerda do subtítulo */
     padding-left: 0.75rem;
 }
@@ -343,6 +343,7 @@ ul.submenu > li:last-child > a {
 .sobre-topico ul {
     list-style-type: none; /* Remove marcadores padrão */
     padding-left: 0; /* Remove recuo padrão da lista */
+    margin: 0; /* Remove margens padrão do UL para não inflar o espaçamento */
 }
 
 .sobre-topico ul li {
@@ -388,7 +389,7 @@ ul.submenu > li:last-child > a {
 
 /* Estilos para a Seção Contato */
 .contato-section {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem; /* aproximar do topo */
   background-color: #f8f9fa; /* Um fundo ligeiramente diferente para destacar a seção */
   text-align: center;
   color: #333; /* Cor de texto mais escura para contraste */
@@ -533,7 +534,7 @@ ul.submenu > li:last-child > a {
 .padroeira-flex {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem; /* reduz o espaço entre texto e imagem */
 }
 
 .padroeira-imagem {
@@ -562,7 +563,8 @@ ul.submenu > li:last-child > a {
 .clero-flex {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: flex-start; /* alinha à esquerda no container */
+  gap: 1.25rem; /* aproxima elementos */
 }
 
 .clero-imagem {
@@ -574,13 +576,20 @@ ul.submenu > li:last-child > a {
 }
 
 .clero-texto {
-  flex: 1;
+  flex: unset;
+  max-width: 900px;
+  margin: 0; /* remove centralização */
+  text-align: left; /* alinha textos à esquerda */
 }
 
 .clero-lista {
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0 0 0;
+  margin: 0.5rem 0 0 0; /* alinha lista à esquerda */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* itens à esquerda */
+  gap: 0.4rem; /* pequeno espaçamento entre linhas */
 }
 
 .clero-lista li {
@@ -604,11 +613,39 @@ ul.submenu > li:last-child > a {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: flex-start; /* fotos alinhadas à esquerda */
 }
 
 .clero-fotos figure {
   margin: 0;
   text-align: center;
+}
+
+/* Cards do Clero - estilo inspirado no exemplo, mantendo as cores do site */
+.clero-card {
+  width: 240px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 16px 14px 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  border-top: 4px solid #d4af37; /* acento amarelo/dourado */
+}
+
+.clero-card .clero-imagem--small {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 10px auto;
+}
+
+.clero-card-title {
+  font-weight: 700;
+  color: #151E30;
+}
+
+.clero-card-role {
+  color: #d4af37; /* dourado para o cargo */
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 /* Reutiliza sombra e formato redondo de .clero-imagem, só muda o tamanho */
@@ -681,11 +718,11 @@ ul.submenu > li:last-child > a {
   min-width: 100%;
   background: #fff;
   color: #151E30;
-  padding: 4rem 0 3rem 0;
+  padding: 3rem 0 2rem 0; /* menos espaço superior/inferior */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.75rem; /* aproxima os blocos principais */
 }
 
 .search-item {

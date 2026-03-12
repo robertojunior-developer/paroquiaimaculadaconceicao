@@ -15,9 +15,12 @@ import Horarios from './Horarios';
 import Noticias from './Noticias';
 import ArtigoNoticia from './ArtigoNoticia';
 import PalavraDoPadre from './PalavraDoPadre';
+import Pastorais from './Pastorais';
+import Movimentos from './Movimentos';
 import ArtigoPalavra from './ArtigoPalavra';
 import Busca from './Busca';
 import { pastoraisData } from './pastoraisData';
+import { movimentosData } from './movimentosData';
 import Home from './Home';
 import Capelas from './Capelas';
 import Pastoral from './Pastoral';
@@ -26,6 +29,8 @@ import Padroeira from './Padroeira';
 import Eventos from './Eventos';
 import Evento from './Evento';
 import Footer from './Footer';
+import Contato from './Contato';
+import Movimento from './Movimento';
 
 const AppContent = () => {
   const location = useLocation();
@@ -59,7 +64,7 @@ const AppContent = () => {
               </ul>
             </li>
             <li className="dropdown-parent">
-              <a href="/#pastorais" onClick={() => setActiveLink('#pastorais')}><FaUsers className="menu-icon" /> Pastorais</a>
+              <Link to="/pastorais" onClick={() => setActiveLink('/pastorais')}><FaUsers className="menu-icon" /> Pastorais</Link>
               <ul className="submenu">
                 {pastoraisData.map(pastoral => (
                   <li key={pastoral.id}>
@@ -75,14 +80,19 @@ const AppContent = () => {
               </ul>
             </li>
             <li className="dropdown-parent">
-              <a href="/#movimentos" onClick={() => setActiveLink('#movimentos')}><FaHandHoldingHeart className="menu-icon" /> Movimentos</a>
+              <Link to="/movimentos" onClick={() => setActiveLink('/movimentos')}><FaHandHoldingHeart className="menu-icon" /> Movimentos</Link>
               <ul className="submenu">
-                <li><a href="/#mac" onClick={() => setActiveLink('#mac')}><FaHandshake className="menu-icon" /> MAC</a></li>
-                <li><a href="/#ecc" onClick={() => setActiveLink('#ecc')}><FaUserFriends className="menu-icon" /> ECC</a></li>
-                <li><a href="/#ejc" onClick={() => setActiveLink('#ejc')}><FaUsers className="menu-icon" /> EJC</a></li>
-                <li><a href="/#via-sacra" onClick={() => setActiveLink('#via-sacra')}><FaRoad className="menu-icon" /> Via Sacra</a></li>
-                <li><a href="#terco-homens" onClick={() => setActiveLink('#terco-homens')}><FaPrayingHands className="menu-icon" /> Terço dos Homens</a></li>
-                <li><a href="#maes-que-oram" onClick={() => setActiveLink('#maes-que-oram')}><FaFemale className="menu-icon" /> Mães que Oram pelos Filhos</a></li>
+                {movimentosData.map(m => (
+                  <li key={m.id}>
+                    <Link
+                      to={`/movimentos/${m.id}`}
+                      className={activeLink === `/movimentos/${m.id}` ? 'active-menu-item' : ''}
+                      onClick={() => setActiveLink(`/movimentos/${m.id}`)}
+                    >
+                      {m.icon && <m.icon className="menu-icon" />} {m.nome}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </li>
             <li><Link to="/formacao" className={activeLink === '/formacao' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/formacao')}><FaBookOpen className="menu-icon" /> Formação</Link></li>
@@ -90,7 +100,7 @@ const AppContent = () => {
             <li><Link to="/eventos" className={activeLink === '/eventos' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/eventos')}><FaCalendar className="menu-icon" /> Eventos</Link></li>
             <li><Link to="/noticias" className={activeLink === '/noticias' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/noticias')}><FaNewspaper className="menu-icon" /> Notícias</Link></li>
             <li><Link to="/horarios" className={activeLink === '/horarios' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/horarios')}><FaClock className="menu-icon" /> Horários</Link></li>
-            <li><a href="/#contato" onClick={() => setActiveLink('#contato')}><FaEnvelope className="menu-icon" /> Contato</a></li>
+            <li><Link to="/contato" className={activeLink === '/contato' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/contato')}><FaEnvelope className="menu-icon" /> Contato</Link></li>
           </ul>
       </nav>
       <div className={`search-container ${!isHomePage ? 'light-bg' : ''}`}>
@@ -117,9 +127,12 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/liturgia" element={<LiturgiaDiaria />} />
+          <Route path="/pastorais" element={<Pastorais />} />
+          <Route path="/movimentos" element={<Movimentos />} />
           <Route path="/formacao/*" element={<Formacao />} />
           <Route path="/capelas" element={<Capelas />} />
           <Route path="/pastorais/:id" element={<Pastoral />} />
+          <Route path="/movimentos/:id" element={<Movimento />} />
           <Route path="/benfeitores" element={<Benfeitores />} />
           <Route path="/padroeira" element={<Padroeira />} />
           <Route path="/eventos" element={<Eventos />} />
@@ -130,6 +143,7 @@ const AppContent = () => {
             <Route path="/palavra-do-padre/:id" element={<ArtigoPalavra />} />
           <Route path="/busca" element={<Busca />} />
           <Route path="/horarios" element={<Horarios />} />
+          <Route path="/contato" element={<Contato />} />
         </Routes>
       </main>
       <Footer />
@@ -139,7 +153,7 @@ const AppContent = () => {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <AppContent />
     </Router>
   );

@@ -1,12 +1,13 @@
 import React from 'react';
 // import QRCode from 'qrcode.react'; // Comentado temporariamente
+import CaridadeImg from '../Images/CARIDADE.jpg';
 
 const Benfeitores = () => {
   const pixKey = '(77) 99999-9999'; // Substitua pelo número de celular real da paróquia
 
   return (
     <div className="benfeitor-page-container">
-      <img src="/Images/CARIDADE.jpg" alt="Ato de Caridade" className="benfeitor-image" />
+      <img src={CaridadeImg} alt="Ato de Caridade" className="benfeitor-image" />
       <div className="benfeitor-content">
         <h2>Seja a Providência em nossa Paróquia</h2>
         <p>

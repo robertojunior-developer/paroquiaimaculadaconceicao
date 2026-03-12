@@ -1,12 +1,13 @@
 import React from 'react';
 import './Padroeira.css';
+import ImaculadaWebp from '../Images/Imaculada-Conceicao.webp';
 
 const Padroeira = () => {
   return (
     <div className="padroeira-container page-content">
       <h1>Nossa Padroeira: Imaculada Conceição</h1>
       <div className="padroeira-content-grid">
-        <img src="/Images/Imaculada-Conceicao.webp" alt="Nossa Senhora Imaculada Conceição" className="padroeira-imagem-lado" />
+        <img src={ImaculadaWebp} alt="Nossa Senhora Imaculada Conceição" className="padroeira-imagem-lado" />
         <div className="padroeira-texto">
           <h2>Um Dogma de Fé e Esperança</h2>
           <p>

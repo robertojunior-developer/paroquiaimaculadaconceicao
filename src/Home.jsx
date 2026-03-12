@@ -4,6 +4,11 @@ import { FaCross, FaPrayingHands, FaCalendar, FaBible, FaUserTie, FaChurch, FaMa
 import InteractiveInfoBox from './InteractiveInfoBox';
 import InfoCards from './InfoCards';
 import EventosHome from './EventosHome';
+import ImaculadaImg from '../Images/Imaculada-Conceição.jpg';
+import PapaImg from '../Images/Papa Leao XIV.jpg';
+import BispoImg from '../Images/Bispo Dom Agamenilton.jpg';
+import PadreAdoniasImg from '../Images/Padre Adonias.jpg';
+import PadreLuisImg from '../Images/Padre Luis Eduardo.jpg';
 
 const Home = () => (
   <>
@@ -12,8 +17,8 @@ const Home = () => (
       <Link to="/horarios" className="info-box-link">
         <InteractiveInfoBox 
           icon={FaCross} 
-          title="Missas"
-          text="Confira os horários das missas e participe conosco."
+          title="Missas e Confissões"
+          text="Confira os horários das missas e das confissões e participe conosco."
         />
       </Link>
       <Link to="/pastorais" className="info-box-link">
@@ -57,11 +62,11 @@ const Home = () => (
         </ul>
       </div>
       <div className="sobre-topico padroeira-flex">
-        <img src="/Images/Imaculada-Conceição.jpg" alt="Nossa Senhora Imaculada Conceição" className="padroeira-imagem" />
         <div className="padroeira-texto">
           <h3>Padroeira: Nossa Senhora Imaculada Conceição</h3>
           <p>A devoção à Imaculada Conceição celebra Maria, mãe de Jesus, concebida sem pecado original. Nossa Senhora Imaculada Conceição é padroeira da paróquia e exemplo de pureza, fé e entrega a Deus. A devoção destaca a confiança na intercessão de Maria e sua importância na história da salvação.</p>
         </div>
+        <img src={ImaculadaImg} alt="Nossa Senhora Imaculada Conceição" className="padroeira-imagem" />
       </div>
       <div className="sobre-topico clero-flex">
         <div className="clero-texto">
@@ -69,25 +74,29 @@ const Home = () => (
           <ul className="clero-lista">
             <li><b>Papa:</b> Leão XIV</li>
             <li><b>Bispo:</b> Dom Francisco Agamenilton</li>
-            <li><b>Pároco:</b> Pe. Adonias</li>
-            <li><b>Vigário:</b> Pe. Luís Eduardo</li>
+            <li><b>Pároco:</b> Padre Luís Eduardo</li>
           </ul>
           <div className="clero-fotos">
-            <figure>
-              <img src="/Images/Papa Leao XIV.jpg" alt="Papa Leão XIV" className="clero-imagem clero-imagem--small" />
-              <figcaption>Papa Leão XIV</figcaption>
+            <figure className="clero-card">
+              <img src={PapaImg} alt="Papa Leão XIV" className="clero-imagem clero-imagem--small" />
+              <figcaption>
+                <div className="clero-card-title">Leão XIV</div>
+                <div className="clero-card-role">Papa</div>
+              </figcaption>
             </figure>
-            <figure>
-              <img src="/Images/Bispo Dom Agamenilton.jpg" alt="Bispo Dom Francisco Agamenilton" className="clero-imagem clero-imagem--small" />
-              <figcaption>Dom Francisco Agamenilton</figcaption>
+            <figure className="clero-card">
+              <img src={BispoImg} alt="Dom Francisco Agamenilton" className="clero-imagem clero-imagem--small" />
+              <figcaption>
+                <div className="clero-card-title">Dom Francisco Agamenilton</div>
+                <div className="clero-card-role">Bispo</div>
+              </figcaption>
             </figure>
-            <figure>
-              <img src="/Images/Padre Adonias.jpg" alt="Padre Adonias" className="clero-imagem clero-imagem--small" />
-              <figcaption>Pe. Adonias</figcaption>
-            </figure>
-            <figure>
-              <img src="/Images/Padre Luis Eduardo.jpg" alt="Padre Luís Eduardo" className="clero-imagem clero-imagem--small" />
-              <figcaption>Pe. Luís Eduardo</figcaption>
+            <figure className="clero-card">
+              <img src={PadreLuisImg} alt="Padre Luís Eduardo" className="clero-imagem clero-imagem--small" />
+              <figcaption>
+                <div className="clero-card-title">Pe. Luís Eduardo</div>
+                <div className="clero-card-role">Pároco</div>
+              </figcaption>
             </figure>
           </div>
         </div>
@@ -101,7 +110,7 @@ const Home = () => (
         <div className="contato-esquerda">
           <div className="contact-item">
             <FaUserTie className="contact-icon" />
-            <p><strong>Administrador Paroquial:</strong> Pe. Adonias Rodrigues Filho</p>
+            <p><strong>Administrador Paroquial:</strong> Padre Luís Eduardo</p>
           </div>
           <div className="contact-item">
             <FaChurch className="contact-icon" />
