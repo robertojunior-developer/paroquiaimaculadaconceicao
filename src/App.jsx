@@ -31,6 +31,7 @@ import Evento from './Evento';
 import Footer from './Footer';
 import Contato from './Contato';
 import Movimento from './Movimento';
+import Historia from './Historia';
 
 const AppContent = () => {
   const location = useLocation();
@@ -56,7 +57,7 @@ const AppContent = () => {
             <li className="dropdown-parent">
               <a href="/#sobre" onClick={() => setActiveLink('#paroquia')}><FaChurch className="menu-icon" /> Paróquia</a>
               <ul className="submenu">
-                <li><a href="/#sobre" onClick={() => setActiveLink('#historia')}><FaLandmark className="menu-icon" /> História</a></li>
+                <li><Link to="/historia" className={activeLink === '/historia' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/historia')}><FaLandmark className="menu-icon" /> História</Link></li>
                                                 <li><Link to="/padroeira" className={activeLink === '/padroeira' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/padroeira')}><FaUserShield className="menu-icon" /> Padroeira</Link></li>
                 <li><Link to="/palavra-do-padre" className={activeLink === '/palavra-do-padre' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/palavra-do-padre')}><FaUserTie className="menu-icon" /> Palavra do Padre</Link></li>
                 <li><Link to="/capelas" className={activeLink === '/capelas' ? 'active-menu-item' : ''} onClick={() => setActiveLink('/capelas')}><FaArchway className="menu-icon" /> Capelas</Link></li>
@@ -131,6 +132,7 @@ const AppContent = () => {
           <Route path="/movimentos" element={<Movimentos />} />
           <Route path="/formacao/*" element={<Formacao />} />
           <Route path="/capelas" element={<Capelas />} />
+          <Route path="/historia" element={<Historia />} />
           <Route path="/pastorais/:id" element={<Pastoral />} />
           <Route path="/movimentos/:id" element={<Movimento />} />
           <Route path="/benfeitores" element={<Benfeitores />} />

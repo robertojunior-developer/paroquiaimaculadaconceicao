@@ -51,7 +51,7 @@ const Home = () => (
       <div className="sobre-nos-container">
         <div className="sobre-topico">
         <h3>História da Paróquia</h3>
-        <p>A história da Paróquia Imaculada Conceição é marcada pela fé e dedicação de sua comunidade, desde sua fundação até os dias atuais. (Conte aqui a história detalhada da paróquia, datas, fatos importantes e curiosidades.)</p>
+        <p>A Paróquia Nossa Senhora Imaculada Conceição, localizada no Parque Mingone II em Luziânia-GO, é uma comunidade ativa na Diocese, com forte devoção mariana. O Padre Luís Eduardo assumiu como pároco em fevereiro de 2026. A paróquia abrange diversos bairros da região, com destaque para a novena e procissão em honra à Imaculada Conceição.</p>
       </div>
       <div className="sobre-topico">
         <h3>Missão, Visão e Valores</h3>
@@ -133,10 +133,10 @@ const Home = () => (
             <p><a href="https://wa.me/5561983049548" target="_blank" rel="noopener noreferrer">+55 61 98304-9548</a></p>
           </div>
           <div className="social-icons">
-            <a href="https://instagram.com/sua_paroquia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://www.instagram.com/paroquiaimcmingone/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a href="https://facebook.com/sua_paroquia" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/ImaculadaMingone/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebookF />
             </a>
             <a href="https://wa.me/5561983049548" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
